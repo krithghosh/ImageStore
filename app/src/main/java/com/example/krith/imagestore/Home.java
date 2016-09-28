@@ -182,6 +182,7 @@ public class Home extends AppCompatActivity {
                     imageView.setImageURI(Uri.parse(realPath));
                 } else if (requestCode == REQUEST_CAMERA) {
                     realPath = Utility.convertCameraImageToBitmap(data);
+                    imageView.setImageURI(Uri.parse(realPath));
                 }
             } catch (Exception e) {
                 Snackbar.make(mainLayout, "There seems to be some problem", Snackbar.LENGTH_SHORT).show();
